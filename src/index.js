@@ -1,17 +1,14 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import PrimeraApp from './PrimeraApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import  './index.css'
+import CounterApp from './CounterApp';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const divRoot = document.querySelector('#root');
+
+
+// esto nos permite crear nuestro arbol de componentes por eso no hago en el root 
+// ReactDOM.render(<PrimeraApp saludo={"hola mundo"}/> , divRoot)
+ReactDOM.render(<CounterApp /> , divRoot)
+// standar dejar un espacio en los componentes
